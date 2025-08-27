@@ -1,0 +1,93 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: left;
+}
+
+
+
+/* ===== Main Layout (Grid) ===== */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding: 4rem;
+}
+
+main .content {
+  background: #cb0e0e;
+  padding: 1rem;
+}
+
+main .sidebar {
+  background: #8f4343;
+  padding: 1rem;
+}
+
+/* ===== Cards Section (Flexbox) ===== */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem;
+}
+
+.card {
+  background: #eee;
+  padding: 2rem;
+  flex: 1;
+  margin: 0.5rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 4rem;
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav li {
+    margin: 0.5rem 0;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
